@@ -1,0 +1,181 @@
+{% extends "layout.html" %}
+
+{% block metatags %}
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+{#    <link href="/static/blog.css" rel="stylesheet">#}
+{% endblock metatags %}
+
+{% block content %}
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="row flex-nowrap justify-content-between align-items-center">
+      <div class="col-4 pt-1">
+        <a class="text-muted" href="#">Subscribe</a>
+      </div>
+      <div class="col-4 text-center">
+        <a class="blog-header-logo text-dark" href="#">Headlines</a>
+      </div>
+      <div class="col-4 d-flex justify-content-end align-items-center">
+        <a class="text-muted" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+        </a>
+        <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 text-muted" href="{{url_for('news_world_1')}}">World</a>
+      <a class="p-2 text-muted" href="{{url_for('usa_1')}}">U.S.</a>
+      <a class="p-2 text-muted" href="{{url_for('news_world_1')}}">Technology</a>
+      <a class="p-2 text-muted" href="{{url_for('usa_1')}}">Business</a>
+      <a class="p-2 text-muted" href="{{url_for('news_world_1')}}">Politics</a>
+      <a class="p-2 text-muted" href="{{url_for('usa_1')}}">Science</a>
+      <a class="p-2 text-muted" href="{{url_for('news_world_1')}}">Health</a>
+      <a class="p-2 text-muted" href="{{url_for('usa_1')}}">Travel</a>
+    </nav>
+  </div>
+
+  <div class="jumbotron p-5 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0 py-3">
+      <h1 class="display-4 font-italic">Researchers Find Flaws in High-Profile Study on Trees and Climate </h1>
+      <p class="lead my-3">Four independent groups say the work overestimates the carbon-absorbing benefits of global forest restoration, but the authors insist their original estimates are accurate.</p>
+      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-lg-12">
+      <div class="card flex-md-row mb-4 box-shadow h-md-250">
+        <div class="card-body d-flex flex-column align-items-start">
+          <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0">
+            <a class="text-dark" href="#">Impact of climate change on rainforest elephants</a>
+          </h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">An international study into the impact of climate change on Central Africa's rainforests and the threat posed to elephant populations in the region.</p>
+          <a href="#">Continue reading</a>
+        </div>
+        <img class="container-lg card-img-right flex-auto d-none d-md-block" style="max-height: 400px; width: auto" src="/static/images/post1.jpg" alt="Card image cap">
+      </div>
+    </div>
+  </div>
+</div>
+
+<main role="main" class="container">
+  <div class="row">
+    <div class="col-md-8 blog-main bg-dark white px-4 py-4">
+      <h3 class="pb-3 mb-4 font-italic border-bottom">From the Firehose</h3>
+      <div class="blog-post">
+        <h2 class="blog-post-title">Fuels, not fire weather, control carbon emissions in boreal forest</h2>
+        <p class="blog-post-meta">October 13, 2020 by <a href="#">Admin</a></p>
+
+        <p>As climate warming stokes longer fire seasons and more severe fires in the North American boreal forest, being able to calculate how much carbon each fire burns grows more urgent.</p>
+        <hr>
+        <p>New research led by Northern Arizona University and published this week in Nature Climate Change suggests that how much carbon burns depends more on available fuels than on fire weather such as drought conditions, temperature, or rain. In a large retrospective study that stretched across Canada and Alaska,
+          the international team of researchers found that the carbon stored belowground in soil organic matter was the most important predictor of how much carbon a fire will release.</p>
+<!--        <hr>-->
+<!--        <h2>Re</h2>-->
+        <p>The team surveyed the vast Western Boreal's diverse forest conditions by analyzing field data collected from 417 burn sites in six ecoregions in Canada and Alaska between 2004-2015. They found that the amount of carbon stored in soils was the biggest predictor of how much carbon would combust,
+          and that soil moisture was also significant in predicting carbon release.</p>
+        <h3>Word from the team</h3>
+        <blockquote style="font-style: italic">"In these northern forests, soil, not trees, can account for up to 90 percent of carbon emissions,
+          so we expected that these organic soils would be a significant driver," said lead author Xanthe Walker of the Center for Ecosystem
+          Science and Society at Northern Arizona University. "But we were surprised that fire weather and the time of year a fire starts proved
+          to be poor indicators of carbon combustion. It's really about the fuels that are there when a fire starts."</blockquote>
+        <p>That's a pivotal finding, since fire weather, as measured by a Fire Weather Index, is one of the main tools scientists and fire managers currently use to model carbon emissions in these boreal forests. This study suggests fuels should be a bigger component of those models. "When we think of climate change and wildfires, we often instinctively think of extreme weather conditions," said Marc-André Parisien, a research scientist with the Canadian Forest Service and co-author of the study. "But our study shows that vegetation also matters -- a lot! Predicting future vegetation is a tough nut to crack, but this study emphasizes the need to keep chipping away at it."
+The vegetation patterns they uncovered were complex -- soil moisture, tree species composition, and stand age at the time of fire all interacted to predict combustion amounts. For instance, highly flammable black spruce was generally a predictor of carbon combustion, and the presence of this species increased with site moisture and stand age at the time of fire. But such interactions are likely to change with the climate. For example, as the climate warms and fire intervals shorten, black spruce stands are being replaced by deciduous trees and jack pine, which grow in shallower soils that release less carbon during fires. The site-level resolution of the study allowed the researchers to capture such dynamism in carbon combustion patterns, and offers clues about the way they may shift in the future.</p>
+        <hr>
+        <p>Source: Northern Arizona University. "Fuels, not fire weather, control carbon emissions in boreal forest." ScienceDaily. ScienceDaily, 15 October 2020.</p>
+      </div><!-- /.blog-post -->
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">Someday, even wet forests could burn due to climate change</h2>
+        <p class="blog-post-meta">September 30, 2020 by <a href="#">University of Colorado at Boulder</a></p>
+
+        <p>Millions of years ago, fire swept across the planet, fueled by an oxygen-rich atmosphere in which even wet forests burned,
+          according to new research by University of Colorado Boulder scientists.</p>
+        <p>The study, published today in Nature Geoscience, provides geochemical evidence showing that forest fires expanded dramatically,
+          potentially burning up to 30 or 40 percent of global forests during a 100,000 year interval more than 90 million years ago. While
+          today's fires are exacerbated by dry conditions, they found that forest fires during this period increased even in wet regions due
+          to changes in global climate.</p>
+        <p>
+          Boudinot analyzed samples from a rock core that spans what is known as the Oceanic Anoxic Event 2 (OAE2) in the Cretaceous period,
+          about 94 million years ago. He found that an increased amount of carbon buried in the oceans at the start of this event was
+          associated with indications for the occurrence of wildfires, which might have been caused by an increase in oxygen in the atmosphere.
+        </p>
+        <p>
+          Large amounts of carbon dioxide in the atmosphere -- much like what Earth is projected to experience by 2100 -- kick-started this cycle.
+
+For 50,000 years before the OAE2 began, algae and land plants drew down this carbon into the oceans through photosynthesis, causing microbial respiration to increase, which led parts of the oceans to become low in or even devoid of oxygen, known as anoxia. This same process exists today in waters where too many nutrients end up in one place, like the mouth of the Mississippi River, where excess fertilizer runoff accumulates and feeds algae -- which are then eaten up by microbes that consume oxygen, creating a dead zone. In these kinds of anoxic waters, the organic carbon that is stored from the atmosphere is buried in sediments, while the oxygen that was part of the carbon dioxide (CO2) is released to the atmosphere.
+
+After 100,000 years of this ocean anoxia event -- which was intensified by warming temperatures -- oceans sediments around the globe had stored enough organic carbon that the atmosphere became rich in oxygen, so much so that it might have facilitated the burning of up to 40 percent of forests across the planet, even in wet and humid regions.
+        </p>
+      </div><!-- /.blog-post -->
+
+      <div class="blog-post">
+        <h2 class="blog-post-title">Spreading ghost forests on NC coast may contribute to climate change</h2>
+        <p class="blog-post-meta">September 28, 2020 by <a href="#">North Carolina State University</a></p>
+
+        <p>A new study found the spread of ghost forests across a coastal region of North Carolina may have implications for global warming. </p>
+        <ul>
+          <li>Researchers said it's unclear exactly what happens to the carbon released when the
+            forests are killed by salt water, and it could be that it goes into the soil.</li>
+          <li>While they found ghost forests spread along the peninsula's coastline, they also saw that the losses at the
+            coast were offset by tree plantings in forests grown for timber during the study.</li>
+          <li>That was one land-management practice that they found could offset carbon losses due to ghost forest spread.
+            They also saw that the use of canals and drainage ditches had an impact on carbon losses. Canals could either aid
+            saltwater encroachment on the land, or help prevent it, depending on their use.</li>
+        </ul>
+      </div><!-- /.blog-post -->
+
+<!--      <nav class="blog-pagination pb-4">-->
+<!--        <a class="btn btn-outline-primary" href="#">Older</a>-->
+<!--        <a class="btn btn-outline-secondary disabled" href="#">Newer</a>-->
+<!--      </nav>-->
+
+    </div><!-- /.blog-main -->
+
+    <aside class="col-md-4 blog-sidebar">
+      <div class="p-3 mb-3 bg-light rounded">
+        <h4 class="font-italic">What's New?</h4>
+        <p>"One of the consequences of having more oxygen in the atmosphere is that it's easier to burn fires," said Boudinot. "It's the same reason you blow on embers to stoke a fire."</p>
+      </div>
+
+      <div class="p-3">
+        <h4 class="font-italic">Archives</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a href="#">September 2019</a></li>
+          <li><a href="#">August 2019</a></li>
+          <li><a href="#">July 2019</a></li>
+          <li><a href="#">June 2019</a></li>
+          <li><a href="#">May 2019</a></li>
+          <li><a href="#">April 2019</a></li>
+          <li><a href="#">March 2019</a></li>
+          <li><a href="#">February 2019</a></li>
+          <li><a href="#">January 2019</a></li>
+          <li><a href="#">December 2018</a></li>
+          <li><a href="#">November 2018</a></li>
+          <li><a href="#">October 2018</a></li>
+        </ol>
+      </div>
+
+      <div class="p-3">
+        <h4 class="font-italic">Social Links</h4>
+        <ol class="list-unstyled">
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ol>
+      </div>
+    </aside><!-- /.blog-sidebar -->
+
+  </div><!-- /.row -->
+
+</main><!-- /.container -->
+<div style="opacity: 0">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut cum eos excepturi maxime neque nobis optio quidem. Aperiam architecto assumenda aut commodi dicta dolores earum eligendi enim fuga fugiat fugit ipsam iste iusto minima minus nam nemo nesciunt nisi non nostrum numquam quae quas qui quibusdam quos recusandae reiciendis repellat sed sequi similique tenetur veniam, voluptate, voluptatem. Dolor illum laudantium natus nemo nobis officiis similique sunt. Aliquid, asperiores blanditiis dicta dolorum harum laudantium modi nesciunt optio sint veritatis. Alias aliquid aperiam at dolores magnam non perferendis quas soluta voluptates voluptatum. Magni, molestiae quae. Aliquid expedita nemo non, odio perspiciatis reiciendis.</p>
+</div >
+{% endblock content %}

@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+{% block metatags %}
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+{% endblock metatags %}
+
+{% block content %}
+<div class="limiter" style="margin-top: 3rem">
+		<div class="container-table100">
+			<div class="wrap-table100">
+{#                <div class="container-xl center-align">CLIMATIC CONDITIONS</div>#}
+				<div class="table100 ver6 m-b-50">
+					<table data-vertable="ver6">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1">Attributes</th>
+								<th class="column100 column2" data-column="column2">Values</th>
+							</tr>
+						</thead>
+						<tbody>
+							{% for key,value in form_data.items() %}
+                                {% if key not in ['Icon','Precipintensity']%}
+                                    <tr class="row100">
+                                        <td class="column100 column1" data-column="column1">{{key}}</td>
+                                        <td class="column100 column2" data-column="column2">{{value}}</td>
+                                    </tr>
+                                {% endif %}
+                            {% endfor %}
+						</tbody>
+					</table>
+				</div>
+            <div class="col-md-8">
+{#                <h5>Units of Measurement</h5>#}
+                <div class="container-unit">
+                <div class="wrap-table100">
+                    <div class="table100 ver3 m-b-50">
+                        <table data-vertable="ver3">
+                            <thead>
+                                <tr class="row100 head">
+                                    <th class="column100 column1" data-column="column1">Attributes</th>
+                                    <th class="column100 column2" data-column="column2">Unit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row100">
+                                    <td class="column100 column1" data-column="column1">Temperature/Dew Point</td>
+                                    <td class="column100 column2" data-column="column2">°F</td>
+                                </tr>
+                                <tr class="row100">
+                                    <td class="column100 column1" data-column="column1">Pressure</td>
+                                    <td class="column100 column2" data-column="column2">hPa or hecto Pascals</td>
+                                </tr>
+                                <tr class="row100">
+                                    <td class="column100 column1" data-column="column1">Precipitation/Cloud Cover</td>
+                                    <td class="column100 column2" data-column="column2">%</td>
+                                </tr>
+                                <tr class="row100">
+                                    <td class="column100 column1" data-column="column1">Humidity</td>
+                                    <td class="column100 column2" data-column="column2">g/m3</td>
+                                </tr>
+                                <tr class="row100">
+                                    <td class="column100 column1" data-column="column1">Wind Speed/Gust</td>
+                                    <td class="column100 column2" data-column="column2">mph</td>
+                                </tr>
+                                <tr class="row100">
+                                    <td class="column100 column1" data-column="column1">Ozone</td>
+                                    <td class="column100 column2" data-column="column2">DU or Dobson Unit</td>
+                                </tr>
+                                <tr class="row100">
+                                    <td class="column100 column1" data-column="column1">Visibility/Distance</td>
+                                    <td class="column100 column2" data-column="column2">Statute Miles</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+		</div>
+	</div>
+    <div class="container text-center">
+                <a id="singlebutton"class="btn btn-outline-danger lbtn" href="{{url_for('measures')}}">Check Forest Fire Probability</a>
+    </div>
+{% endblock content %}
+
+{% block script %}
+<!--===============================================================================================-->
+{#	<script src="static/vendor/jquery/jquery-3.2.1.min.js"></script>#}
+<!--===============================================================================================-->
+{#	<script src="static/vendor/bootstrap/js/popper.js"></script>#}
+{#	<script src="static/vendor/bootstrap/js/bootstrap.min.js"></script>#}
+<!--===============================================================================================-->
+	<script src="static/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="static/js/main.js"></script>
+{% endblock script %}
